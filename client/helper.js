@@ -1,4 +1,8 @@
 //helper functions to be DRY
+const handleError = (message) => {
+  document.getElementById('errorMessage').textContent = message;
+  document.getElementById('domoMessage').classList.remove('hidden');
+};
 
 const sendPost = async (url, data, handler) => {
   const response = await fetch(url, {
