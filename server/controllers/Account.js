@@ -6,10 +6,6 @@ const loginPage = (req, res) => {
     return res.render('login');
 };
 
-const signupPage = (req, res) => {
-    return res.render('signup');
-};
-
 const logout = (req, res) => {
     req.session.destroy();  //every request will have a session object
     return res.redirect('/');
@@ -65,4 +61,4 @@ const signup = async (req, res) => {
     }
 };
 
-module.exports = {loginPage, signupPage, login, logout, signup};
+module.exports = {loginPage, login, logout, signup};
