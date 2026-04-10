@@ -8,7 +8,7 @@ const handleLogin = (e) => {
     helper.hideError();
 
     const username = e.target.querySelector('#user').value;
-    const pass = e.target.querySelector('#pass');
+    const pass = e.target.querySelector('#pass').value;
 
     if(!username || !pass){
         helper.handleError('Username or password is empty!');
