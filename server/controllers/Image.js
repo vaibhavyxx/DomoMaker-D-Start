@@ -1,4 +1,4 @@
-const Image = require('../models/Image.js');
+/*const Image = require('../models/Image.js');
 
 const uploadPage = (req, res) => {
     res.render('upload');
@@ -10,7 +10,7 @@ const uploadFile = async (req, res) => {
         return res.status(400).json({error:'No files were uploaded'});
     }
     const {sampleFile} = req.files;
-    try{
+    /*try{
         const newFile = new Image(sampleFile);
         const doc = await newFile.save();
         return res.status(201).json({
@@ -25,4 +25,4 @@ const uploadFile = async (req, res) => {
 }
 module.exports = {
     uploadFile, uploadPage,
-};
+};*/
