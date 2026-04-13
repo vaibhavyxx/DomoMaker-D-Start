@@ -1,4 +1,5 @@
 const controllers = require('./controllers');
+const { renderWelcome } = require('./controllers/Account');
 const mid = require('./middleware');
 
 const router = (app) => {
@@ -13,6 +14,8 @@ const router = (app) => {
     
     app.get('/maker', mid.requiresLogin, controllers.Domo.makerPage);
     app.post('/maker', mid.requiresLogin, controllers.Domo.makeDomo);
+
+    app.get('/about', mid.requiresLogin, renderWelcome);
 
     app.get('/', mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
 };

@@ -30,6 +30,12 @@ const login = (req, res) => {
     });
 };
 
+const renderWelcome = (req, res) => {
+    return res.render('maker', {
+        username: req.session.account.username,
+    });
+};
+
 const signup = async (req, res) => {
     const username = `${req.body.username}`;
     const pass = `${req.body.pass}`;
@@ -61,4 +67,4 @@ const signup = async (req, res) => {
     }
 };
 
-module.exports = {loginPage, login, logout, signup};
+module.exports = {loginPage, login, logout, signup, renderWelcome};
