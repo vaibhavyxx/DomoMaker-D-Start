@@ -31,7 +31,7 @@ const DomoForm = (props) => {
                 <label htmlFor='name'>Name: </label>
                 <input id='domoName' type='text' name='name' placeholder='Domo Name'/>
                 <label htmlFor='age'>Age: </label>
-                <input id='domoAge' type='number' min='0' name='age' />
+                <input id='domoAge' type='number' min='0' name='age' placeholder='Domo Age' />
                 <label htmlFor='creature'>Creature: </label>
                 <input id='domoCreature' type='text' name='creature' placeholder='Domo Creature'/>
                 <input className='makeDomoSubmit' type='submit' value='Make Domo' />
